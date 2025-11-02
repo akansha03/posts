@@ -10,7 +10,7 @@ SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-# To work with the database, use session local
+# To work with the database, use session local - sqlalchemy
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
