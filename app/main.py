@@ -34,4 +34,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message" : "Hello Akansha ! Adulting Sucks"}
+    return {"message" : "Hello Akansha ! deployed to CI/CD"}
