@@ -5,7 +5,7 @@ on: [push, pull_request]
 # In order for environment variables to be accessible across all the jobs add environment variable on the top  before jobs 
 
 jobs:
-  job1:
+  build:
     environment:
       name: testing 
     env:
