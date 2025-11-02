@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     environment:
-      name: production
+      name: testing
     if: github.ref == 'refs/heads/main' && needs.build.result == 'success'
     steps:
       - name: Checkout git hub repo
