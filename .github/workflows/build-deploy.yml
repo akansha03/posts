@@ -83,14 +83,7 @@ jobs:
     steps:
       - name: Checkout git hub repo
         uses: actions/checkout@v5
-        
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Trigger Render deployment
-        uses: sws2apps/render-deployment@main
-        with:
-          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
-          apiKey: ${{ secrets.RENDER_API_KEY }}
-          node-version: lts/Jod    
-          cli-version: 2.2.0       
+      - name: Trigger Render Deploy
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}   
+              
