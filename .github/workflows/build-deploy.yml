@@ -8,6 +8,13 @@ jobs:
     steps: 
       - name: pulling git repo
         uses: actions/checkout@v5
-      - name: hello to all
-        run: echo "hello all" 
+      - name: Install Python 3.13
+        uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'  
+      - name: Update pip
+        run: python3 -m pip3 install --upgrade pip
+      - name: Install dependencies
+        run: pip3 install -r requirements.txt
+
          
