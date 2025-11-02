@@ -1,6 +1,5 @@
 import pytest
 from app import schema
-
 # Practice : setup the order to get the lowest id for the last assertion to work
 
 def test_get_all_posts(authorized_client, test_create_posts):
